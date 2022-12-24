@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Usando seletor</h1>
+    <ul>
+        <li> Java </li>
+        <li> Python </li>
+        <li> NodeJS </li>
+    </ul>
+    <div id ="conteudo" class = "mensagem">
+
+    </div>
+
+    <div name ="divconteudo" class ="mensagem" > </div>
+    <div name ="divconteudo" class ="mensagem"> </div>
+    <div name ="divconteudo" class ="mensagem"> </div>
+    
+
+</body>
+
+<span id="novoSpan" class= "novo" > 
+    texto do span
+</span>
+
+<script>
+    elemento0 = document.getElementsByTagName("li")[0];
+    elemento0.style.color = "blue";
+
+    elemento1 = document.getElementsByTagName("li")[1];
+    elemento1.style.background = "red";
+
+    elemento2 = document.getElementsByTagName("li")[2];
+    elemento2.innerText = "Springboot";
+
+    elementoDiv = document.getElementById("conteudo");
+    elementoDiv.innerHTML = "<p>texto da <b> id conteudo </b> </p>";
+    
+    elementoDivName = document.getElementsByName("divconteudo")[0];
+    elementoDivName.style.color ="divconteudo";
+    elementoDivName.innerText = "texto da div 0";
+
+    elementoClasse = document.getElementsByClassName("mensagem");
+    elementoClasse[2].innerHTML = "<b> acrescentando texto bold na div 1</b>";
+
+    elementoSpan = document.querySelector("span.novo");
+    //elementoSpan = document.querySelector(".novo");
+    //elementoSpan = document.querySelector("#novoSpan");
+    elementoSpan.style.color = "red";
+
+    elementoSelector = document.querySelectorAll(".mensagem");
+    elementoSelector[3].innerHTML = "<p> Incluindo um texto div 2</p>";
+
+    
+
+</script>
+
+</html>
